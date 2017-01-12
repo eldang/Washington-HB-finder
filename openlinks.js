@@ -1,7 +1,9 @@
 var currentBiennium = (function () {
   var date = new Date();
-  var firstYear = date.getFullYear();
-  return "" + firstYear + "-" + (firstYear + 1);
+  var thisYear = date.getFullYear();
+  var firstYear = (thisYear % 2) ? thisYear : thisYear - 1;
+  var secondYear = firstYear - 1999;
+  return "" + firstYear + "-" + secondYear;
 })();
 
 $(document).ready(function() {
