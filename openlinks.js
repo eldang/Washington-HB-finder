@@ -1,4 +1,8 @@
-var currentBiennium = "2017-18";
+var currentBiennium = (function () {
+  var date = new Date();
+  var firstYear = date.getFullYear();
+  return "" + firstYear + "-" + (firstYear + 1);
+})();
 
 $(document).ready(function() {
 	$("#biennium")[0].textContent = $("#biennium")[0].value =  currentBiennium;
