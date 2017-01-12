@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Washington HB finder</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Shortcut to quickly get info and feedback form for Washington State bills">
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="./openlinks.js"></script>
+	</head>
+	
+	<body>
+		<h1>Enter a 4-digit HB number to get information about a Washington State bill</h1>
+		
+		<p>
+			HB number: <input type="text" name="billNumber" id="billNumber" value="" maxlength="4" />
+			<br />
+			Legislative session (biennium, formatted YYYY-YY, always odd-numbered years first):
+			<br />
+			<input type="text" name="biennium" id="biennium" maxlength="7" /> <i>NB: the feedback form is only available for current session bills</i>
+			<br />
+			<input type="submit" value="Submit" name="submitButton" id="submitButton" onClick="submit();" />
+		</p>
+		<hr />
+		<h2>What's this?</h2>
+		<p>
+			To its credit, the Washington State Legislature provides a standard set of information about bills before it, with very regular URLs that make it easy to look key things up about any bill with just its number. This page is just a shortcut to save me having to type all this stuff over and over again. I hope it helps you too.
+		</p>
+		<p>
+			Clicking the submit link above with a valid HB number and biennium (it comes prefilled to the current one) will open new tabs with the following information:
+		</p>
+		<ul>
+			<li>Concise bill digest. (<b>Beware</b>: these are sometimes deliberately misleading. If you don't already know the background to a bill, don't trust the digest on its own.)</li>
+			<li>Full text of the bill.</li>
+			<li>"Text of a Legislative Document" page with links to other info about a bill.  This includes links to the above 2 things, and <i>if</i> other documents have been prepared (e.g. analyses, amended versions) it will list those as well.</li>
+			<li>Bill Summary page which shows its current status and links to all its sponsors.</li>
+			<li><i>For current session bills only</i>: Comment page which finds your District, Senator and 2 Representatives if you enter your address, and gives you an easy way to submit email comments to them about this bill.</li>
+		</ul>
+		<hr />
+		<h2>Credits, contributing, etc</h2>
+		<h3>Who made this?</h3>
+		<a href="https://github.com/eldang">Eldan Goldenberg</a>.  You can also find me on <a href="https://twitter.com/eldang">Twitter</a> or email me at [easily guessed username] at gmail dot com.
+		<h3>Can I help make it better?</h3>
+		Yes please!  Here is a <a href="https://github.com/eldang/Washington-HB-finder/labels/help%20wanted">list of things I especially want help with</a>.  I am of course also open to other suggestions.
+		<h3>Can I make a version for elsewhere?</h3>
+		Yes please!  I would be particularly pleased to see one for the US federal government, as I would also use that myself.  But to do that, please make your own fork of the <a href="https://github.com/eldang/Washington-HB-finder">Github repository</a> so that this one stays simple.
+	</body>
+</html>
