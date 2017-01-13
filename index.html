@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>Washington HB finder</title>
+		<title>Washington legislative bill finder</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="Shortcut to quickly get info and feedback form for Washington State bills">
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
@@ -9,14 +9,12 @@
 	</head>
 	
 	<body>
-		<h1>Enter a 4-digit HB number to get information about a Washington State bill</h1>
+		<h1>Enter a 4-digit bill number to get information about a Washington State bill</h1>
 		
 		<p>
-			HB number: <input type="text" name="billNumber" id="billNumber" value="" maxlength="4" />
+			Bill number <i>(without the "HB" or "SB" prefix)</i>: <input type="text" name="billNumber" id="billNumber" value="" maxlength="4" />
 			<br />
-			Legislative session (biennium, formatted YYYY-YY, always odd-numbered years first):
-			<br />
-			<input type="text" name="biennium" id="biennium" maxlength="7" /> <i>NB: the feedback form is only available for current session bills</i>
+			Legislative session (biennium, formatted YYYY-YY, always odd-numbered years first): <input type="text" name="biennium" id="biennium" maxlength="7" />
 			<br />
 			<input type="submit" value="Submit" name="submitButton" id="submitButton" onClick="submit();" />
 		</p>
