@@ -21,15 +21,16 @@ $(document).ready(function() {
 
 function submit(){
 	var timeout = 10; // timeout incrementing lets us avoid some basic open-multiple-windows protections.
-	var hb = $("#billNumber")[0].value;
+	var billNum = $("#billNumber")[0].value;
 	var dates = $("#biennium")[0].value;
 
+
 	var urls = {
-		"digest": "https://lawfilesext.leg.wa.gov/biennium/" + dates + "/Htm/Digests/House/" + hb + ".DIG.htm",
-		"fullUrl": "https://lawfilesext.leg.wa.gov/biennium/" + dates + "/Htm/Bills/House%20Bills/" + hb + ".htm",
-		"docs": "https://app.leg.wa.gov/dlr/tld/results.aspx?params=" + dates + "," + hb,
-		"status": "https://app.leg.wa.gov/billsummary?BillNumber=" + hb + "&Year=" + dates.substring(0,4),
-		"feedback": dates === currentBiennium ? "https://app.leg.wa.gov/pbc/bill/" + hb : ""
+		"digest": "https://lawfilesext.leg.wa.gov/biennium/" + dates + "/Htm/Digests/House/" + billNum + ".DIG.htm",
+		"fullUrl": "https://lawfilesext.leg.wa.gov/biennium/" + dates + "/Htm/Bills/House%20Bills/" + billNum + ".htm",
+		"docs": "https://app.leg.wa.gov/dlr/tld/results.aspx?params=" + dates + "," + billNum,
+		"status": "https://app.leg.wa.gov/billsummary?BillNumber=" + billNum + "&Year=" + dates.substring(0,4),
+		"feedback": dates === currentBiennium ? "https://app.leg.wa.gov/pbc/bill/" + billNum : ""
 	};
 
 	var openLink = function(title, url) {
