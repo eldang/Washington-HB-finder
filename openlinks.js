@@ -10,7 +10,7 @@ $(document).ready(function() {
 	// prefill the biennium box with the current session because that's going to be what people want most often
 	$("#biennium")[0].textContent = $("#biennium")[0].value =  currentBiennium;
 
-	// event listener so that pressing return but not tab in the bill number box submits the form
+	// event listener so that pressing return but not tab a text box submits the form
 	$(":input").keypress(function(event){
 		if(event.keyCode === 13){
 			submit();
