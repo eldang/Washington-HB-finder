@@ -11,7 +11,7 @@ $(document).ready(function() {
 	$("#biennium")[0].textContent = $("#biennium")[0].value =  currentBiennium;
 
 	// event listener so that pressing return but not tab in the bill number box submits the form
-	$("#billNumber").keypress(function(event){
+	$(":input").keypress(function(event){
 		if(event.keyCode === 13){
 			submit();
 		}
