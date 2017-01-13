@@ -23,11 +23,11 @@ function submit(){
 	var timeout = 10; // timeout incrementing lets us avoid some basic open-multiple-windows protections.
 	var billNum = $("#billNumber")[0].value;
 	var dates = $("#biennium")[0].value;
-
+	var chamber = billNum < 5000 ? "House" : "Senate";
 
 	var urls = {
-		"digest": "https://lawfilesext.leg.wa.gov/biennium/" + dates + "/Htm/Digests/House/" + billNum + ".DIG.htm",
-		"fullUrl": "https://lawfilesext.leg.wa.gov/biennium/" + dates + "/Htm/Bills/House%20Bills/" + billNum + ".htm",
+		"digest": "https://lawfilesext.leg.wa.gov/biennium/" + dates + "/Htm/Digests/" + chamber + "/" + billNum + ".DIG.htm",
+		"fullUrl": "https://lawfilesext.leg.wa.gov/biennium/" + dates + "/Htm/Bills/" + chamber + "%20Bills/" + billNum + ".htm",
 		"docs": "https://app.leg.wa.gov/dlr/tld/results.aspx?params=" + dates + "," + billNum,
 		"status": "https://app.leg.wa.gov/billsummary?BillNumber=" + billNum + "&Year=" + dates.substring(0,4),
 		"feedback": dates === currentBiennium ? "https://app.leg.wa.gov/pbc/bill/" + billNum : ""
